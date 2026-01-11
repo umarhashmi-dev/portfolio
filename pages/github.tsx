@@ -80,15 +80,30 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
 };
 
 export async function getStaticProps() {
-  const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`
-  );
-  const user = await userRes.json();
+  let user = {};
+  let repos = [];
 
-  const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`
-  );
-  const repos = await repoRes.json();
+  try {
+    const userRes = await fetch(
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`
+    );
+    user = await userRes.json();
+  } catch (error) {
+    console.error('Failed to fetch user data', error);
+  }
+
+  try {
+    const repoRes = await fetch(
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`
+    );
+    repos = await repoRes.json();
+  } catch (error) {
+    console.error('Failed to fetch repos', error);
+  }
+
+  if (!Array.isArray(repos)) {
+    repos = [];
+  }
 
   return {
     props: { title: 'GitHub', repos, user },

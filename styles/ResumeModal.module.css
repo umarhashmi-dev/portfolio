@@ -1,0 +1,133 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modalContent {
+    background: var(--main-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalSlide 0.3s ease-out;
+}
+
+.modalHeader {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.printBtn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.printBtn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.closeBtn {
+    background-color: transparent;
+    color: rgb(156, 163, 175);
+    border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.closeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.resumeScrollArea {
+    overflow-y: auto;
+    padding: 30px;
+    background: #52565e;
+    /* Neutral grey background behind the paper */
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+@keyframes modalSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide modal UI when creating PDF/Printing */
+@media print {
+
+    .overlay,
+    .modalContent,
+    .modalHeader,
+    .resumeScrollArea {
+        position: static;
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        display: block;
+        max-width: none;
+        max-height: none;
+    }
+
+    .controls,
+    .title {
+        display: none !important;
+    }
+}

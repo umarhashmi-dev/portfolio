@@ -8,7 +8,16 @@ import {
   VscCode,
   VscFiles,
   VscEdit,
+  VscTools,
 } from 'react-icons/vsc';
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+} from 'react-icons/fa';
+import { SiThreads } from 'react-icons/si';
 
 import styles from '@/styles/Sidebar.module.css';
 
@@ -17,12 +26,44 @@ const sidebarTopItems = [
   { Icon: VscGithubAlt, path: '/github' },
   { Icon: VscCode, path: '/projects' },
   { Icon: VscEdit, path: '/articles' },
+  { Icon: VscTools, path: '/technologies' },
   { Icon: VscMail, path: '/contact' },
 ];
 
 const sidebarBottomItems = [
   { Icon: VscAccount, path: '/about' },
   { Icon: VscSettings, path: '/settings' },
+];
+
+const socialItems = [
+  {
+    Icon: FaWhatsapp,
+    href: 'https://wa.me/923021550385',
+  },
+  {
+    Icon: FaInstagram,
+    href: 'https://www.instagram.com/umarhashmi.dev/',
+  },
+  {
+    Icon: FaFacebook,
+    href: 'https://www.facebook.com/umarhashmi.dev',
+  },
+  {
+    Icon: SiThreads,
+    href: 'https://www.threads.com/@umarhashmi.dev',
+  },
+  {
+    Icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/umarhashmi-dev',
+  },
+  {
+    Icon: FaTwitter,
+    href: 'https://x.com/umarhashmi_dev/',
+  },
+  {
+    Icon: VscGithubAlt,
+    href: 'https://github.com/umarhashmi-dev',
+  },
 ];
 
 const Sidebar = () => {
@@ -34,12 +75,11 @@ const Sidebar = () => {
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
             <div
-              className={`${styles.iconContainer} ${
-                router.pathname === path && styles.active
-              }`}
+              className={`${styles.iconContainer} ${router.pathname === path && styles.active
+                }`}
             >
               <Icon
-                size={16}
+                size={24}
                 fill={
                   router.pathname === path
                     ? 'rgb(225, 228, 232)'
@@ -52,10 +92,22 @@ const Sidebar = () => {
         ))}
       </div>
       <div className={styles.sidebarBottom}>
+        {socialItems.map(({ Icon, href }) => (
+          <div className={styles.iconContainer} key={href}>
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <Icon
+                size={24}
+                fill="rgb(106, 115, 125)"
+                className={styles.icon}
+              />
+            </a>
+          </div>
+        ))}
         {sidebarBottomItems.map(({ Icon, path }) => (
           <div className={styles.iconContainer} key={path}>
             <Link href={path}>
               <Icon
+                size={24}
                 fill={
                   router.pathname === path
                     ? 'rgb(225, 228, 232)'

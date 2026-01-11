@@ -14,14 +14,14 @@ export default function HomePage() {
       type: 'variable',
     },
     { code: '  const developerInfo = {', type: 'variable' },
-    { code: "    name: 'Nitin Ranganath',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
+    { code: "    name: 'Umar Hashmi',", type: 'array-item' },
+    { code: "    role: 'Full-Stack Web Developer · UI/UX Designer · Database Expert',", type: 'array-item' },
+    { code: "    bio: 'I build modern, fast, and intelligent web solutions.'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
     {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
+      code: '    document.title = "Umar Hashmi | Portfolio";',
       type: 'return',
     },
     { code: '    setIsLoaded(true);', type: 'function-call' },
@@ -62,9 +62,8 @@ export default function HomePage() {
                 {codeLines.map((_, index) => (
                   <div
                     key={index}
-                    className={`${styles.lineNumber} ${
-                      index === activeLineIndex ? styles.activeLine : ''
-                    }`}
+                    className={`${styles.lineNumber} ${index === activeLineIndex ? styles.activeLine : ''
+                      }`}
                   >
                     {index + 1}
                   </div>
@@ -75,9 +74,8 @@ export default function HomePage() {
                 {codeLines.map((line, index) => (
                   <div
                     key={index}
-                    className={`${styles.codeLine} ${styles[line.type]} ${
-                      index === activeLineIndex ? styles.highlightedLine : ''
-                    }`}
+                    className={`${styles.codeLine} ${styles[line.type]} ${index === activeLineIndex ? styles.highlightedLine : ''
+                      }`}
                   >
                     {line.code}
                   </div>
@@ -91,20 +89,27 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <h1 className={styles.developerName}>
-            Nitin <span className={styles.accentText}>Ranganath</span>
+            Umar <span className={styles.accentText}>Hashmi</span>
           </h1>
 
-          <div className={styles.developerRole}>Full Stack Web Developer</div>
+          <div className={styles.developerRole}>Full-Stack Web Developer · UI/UX Designer · Database Expert</div>
 
           <p className={styles.bio}>
-            I build elegant, responsive web applications with modern
-            technologies. Focused on clean code and intuitive user experiences.
+            I’m a Full-Stack Web Developer, UI/UX Designer, and Database Expert with 6+ years of experience building modern, fast, and intelligent web solutions.
           </p>
 
           <div className={styles.actionLinks}>
             <Link href="/projects" className={styles.primaryLink}>
               View Projects <VscArrowRight />
             </Link>
+            <a
+              href="/Umar Hashmi CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.outlinedLink}
+            >
+              View CV
+            </a>
           </div>
         </div>
       </div>

@@ -4,14 +4,13 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Nitin Ranganath</h1>
-        <div className={styles.subtitle}>Software Engineer</div>
+        <h1 className={styles.title}>Umar Hashmi</h1>
+        <div className={styles.subtitle}>Full-Stack Web Developer · UI/UX Designer · Database Expert</div>
 
         <div className={styles.aboutContent}>
           <section className={styles.section}>
             <p className={styles.paragraph}>
-              Hey! I&apos;m a software engineer from Mumbai, India. I primarily
-              work with JavaScript / TypeScript and the React ecosystem.
+              I’m a Full-Stack Web Developer, UI/UX Designer, and Database Expert with 6+ years of experience building modern, fast, and intelligent web solutions.
             </p>
             <p className={styles.paragraph}>
               I&apos;m focused on frontend development with React, but
@@ -22,37 +21,49 @@ const AboutPage = () => {
 
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Experience</h2>
-            <p className={styles.paragraph}>
-              Currently at <span className={styles.highlight}>Tessact</span> as
-              Software Engineer 2, working with a lean team of 4 frontend
-              engineers to build a next-gen video creation suite for the people
-              of video.
-            </p>
-            <p className={styles.paragraph}>
-              I&apos;ve been leading the development efforts for bringing
-              collaborative video reviewing and editing to the platform. I also
-              maintain our in-house component library, icon library and website.
-            </p>
+
+            <div className={styles.experienceItem}>
+              <h3 className={styles.experienceTitle}>Full-Stack Web Developer / UI-UX Designer</h3>
+              <p className={styles.experienceSubtitle}>Freelance & Independent Projects | 2018 – Present</p>
+              <ul className={styles.experienceList}>
+                <li>Designed and developed modern, responsive, and high-performance web applications.</li>
+                <li>Built scalable frontend systems using modern JavaScript frameworks and clean UI architectures.</li>
+                <li>Integrated AI and automation solutions to optimize workflows and enhance user experiences.</li>
+                <li>Delivered end-to-end solutions including UI/UX design, development, optimization, and deployment.</li>
+                <li>Worked with global clients across the USA, UK, UAE, Canada, Germany, Australia, and Pakistan.</li>
+                <li>Successfully completed 250+ projects across multiple industries.</li>
+              </ul>
+            </div>
+
+            <div className={styles.experienceItem}>
+              <h3 className={styles.experienceTitle}>AI & Automation Specialist</h3>
+              <p className={styles.experienceSubtitle}>Independent Research & Product Development | 2022 – Present</p>
+              <ul className={styles.experienceList}>
+                <li>Developed AI-powered tools using OpenAI and Gemini APIs.</li>
+                <li>Designed automation systems for content generation, data processing, and workflow optimization.</li>
+                <li>Experimented with AI-assisted software development and prompt-driven systems.</li>
+                <li>Focused on building intelligent, performance-oriented digital products.</li>
+              </ul>
+            </div>
+
+            <div className={styles.experienceItem}>
+              <h3 className={styles.experienceTitle}>UI/UX Designer</h3>
+              <p className={styles.experienceSubtitle}>Product & Web Interfaces | 2018 – Present</p>
+              <ul className={styles.experienceList}>
+                <li>Designed user-centered interfaces with a strong focus on usability and clarity.</li>
+                <li>Built design systems and component-based UI structures.</li>
+                <li>Improved user engagement through data-driven UX decisions.</li>
+              </ul>
+            </div>
           </section>
 
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Writing</h2>
-            <p className={styles.paragraph}>
-              I&apos;ve had the pleasure of writing for some amazing
-              publications like{' '}
-              <span className={styles.highlight}>100ms Blog</span>,{' '}
-              <span className={styles.highlight}>LogRocket Blog</span>,{' '}
-              <span className={styles.highlight}>DEV.to</span> and more as a
-              freelance technical author.
-            </p>
-          </section>
-
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Beyond Code</h2>
-            <p className={styles.paragraph}>
-              Aside from programming and writing, I like to read a good
-              dystopian novel, listen to calm piano music or just laze around.
-            </p>
+            <h2 className={styles.sectionTitle}>Highlights</h2>
+            <ul className={styles.experienceList}>
+              <li>6+ years of professional experience</li>
+              <li>Strong focus on performance, scalability, and innovation</li>
+              <li>Hands-on experience with AI, automation, and modern web systems</li>
+            </ul>
           </section>
         </div>
       </div>

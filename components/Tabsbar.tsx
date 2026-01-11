@@ -15,6 +15,11 @@ const Tabsbar = () => {
         path="/articles"
       />
       <Tab
+        icon="/logos/tools_icon.svg"
+        filename="technologies.ts"
+        path="/technologies"
+      />
+      <Tab
         icon="/logos/markdown_icon.svg"
         filename="github.md"
         path="/github"

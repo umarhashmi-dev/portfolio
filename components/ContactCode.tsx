@@ -3,38 +3,43 @@ import styles from '@/styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'nitinranganath.com',
-    href: 'https://nitinranganath.com',
+    link: 'umarhashmi.dev',
+    href: 'https://www.umarhashmi.dev',
   },
   {
     social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    link: 'contact@umarhashmi.dev',
+    href: 'mailto:contact@umarhashmi.dev',
   },
   {
     social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    link: 'umarhashmi-dev',
+    href: 'https://github.com/umarhashmi-dev',
   },
   {
     social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
+    link: 'umarhashmi-dev',
+    href: 'https://www.linkedin.com/in/umarhashmi-dev',
   },
   {
     social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
+    link: 'umarhashmi_dev',
+    href: 'https://x.com/umarhashmi_dev/',
   },
   {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
+    social: 'instagram',
+    link: 'umarhashmi.dev',
+    href: 'https://www.instagram.com/umarhashmi.dev/',
   },
   {
-    social: 'peerlist',
-    link: 'nitinranganath',
-    href: 'https://peerlist.io/nitinranganath',
+    social: 'facebook',
+    link: 'umarhashmi.dev',
+    href: 'https://www.facebook.com/umarhashmi.dev',
+  },
+  {
+    social: 'whatsapp',
+    link: '+923021550385',
+    href: 'https://wa.me/923021550385',
   },
 ];
 

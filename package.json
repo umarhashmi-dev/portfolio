@@ -8,6 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "keywords": [
+    "Umar Hashmi",
+    "vscode-portfolio",
+    "Umar Hashmi Portfolio"
+  ],
+  "author": "Umar Hashmi",
+  "license": "MIT",
   "dependencies": {
     "next": "^15.2.3",
     "react": "^19.0.0",

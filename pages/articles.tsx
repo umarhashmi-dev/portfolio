@@ -15,7 +15,7 @@ const ArticlesPage = ({ articles }: ArticlesPageProps) => {
       <p className={styles.pageSubtitle}>
         Recent posts from{' '}
         <a
-          href="https://dev.to/itsnitinr"
+          href="https://dev.to/umarhashmi-dev"
           target="_blank"
           rel="noopener"
           className={styles.underline}
@@ -34,16 +34,24 @@ const ArticlesPage = ({ articles }: ArticlesPageProps) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://dev.to/api/articles/me/published?per_page=6',
-    {
-      headers: {
-        'api-key': process.env.DEV_TO_API_KEY!,
-      },
-    }
-  );
+  let data = [];
+  try {
+    const res = await fetch(
+      'https://dev.to/api/articles/me/published?per_page=6',
+      {
+        headers: {
+          'api-key': process.env.DEV_TO_API_KEY!,
+        },
+      }
+    );
+    data = await res.json();
+  } catch (error) {
+    console.error('Failed to fetch articles', error);
+  }
 
-  const data = await res.json();
+  if (!Array.isArray(data)) {
+    data = [];
+  }
 
   return {
     props: { title: 'Articles', articles: data },
