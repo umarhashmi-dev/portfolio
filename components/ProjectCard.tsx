@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Project } from '@/types';
 import styles from '@/styles/ProjectCard.module.css';
 
@@ -14,6 +13,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             Next.js Image component can be used but requires more setup for this specific effect (object-fit: cover, etc).
             For simplicity and the specific 'scroll on hover' requirement where the image needs to be fully rendered in DOM:
         */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={project.image}
           alt={project.title}
