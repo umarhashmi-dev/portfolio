@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { VscChevronRight } from 'react-icons/vsc';
+import { VscChevronRight, VscGithubAlt, VscBriefcase } from 'react-icons/vsc';
 
 import styles from '@/styles/Explorer.module.css';
 
@@ -39,7 +39,12 @@ const explorerItems = [
   {
     name: 'github.md',
     path: '/github',
-    icon: '/logos/markdown_icon.svg',
+    ReactIcon: VscGithubAlt,
+  },
+  {
+    name: 'services.ts',
+    path: '/services',
+    ReactIcon: VscBriefcase,
   },
 ];
 
@@ -71,7 +76,11 @@ const Explorer = () => {
           {explorerItems.map((item) => (
             <Link href={item.path} key={item.name}>
               <div className={styles.file}>
-                <Image src={item.icon} alt={item.name} height={18} width={18} />{' '}
+                {item.ReactIcon ? (
+                  <item.ReactIcon className={styles.icon} size={18} />
+                ) : (
+                  <Image src={item.icon!} alt={item.name} height={18} width={18} />
+                )}
                 <p>{item.name}</p>
               </div>
             </Link>

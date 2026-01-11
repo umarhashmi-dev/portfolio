@@ -1,10 +1,23 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 import { VscArrowRight } from 'react-icons/vsc';
 
 import styles from '@/styles/HomePage.module.css';
 
 export default function HomePage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Umar Hashmi",
+    "url": "https://umarhashmi.dev",
+    "jobTitle": "Full Stack Developer",
+    "sameAs": [
+      "https://github.com/umarhashmi-dev",
+      "https://www.linkedin.com/in/umarhashmi-dev",
+      "https://twitter.com/umarhashmi_dev"
+    ]
+  };
   const [activeLineIndex, setActiveLineIndex] = useState(0);
 
   const codeLines = [
@@ -54,6 +67,11 @@ export default function HomePage() {
 
   return (
     <div className={styles.heroLayout}>
+      <Script
+        id="schema-person"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <div className={styles.container}>
         <div className={styles.codeSection}>
           <div className={styles.codeContainer}>

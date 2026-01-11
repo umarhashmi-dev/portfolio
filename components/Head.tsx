@@ -24,6 +24,7 @@ const CustomHead = ({ title }: CustomHeadProps) => {
       <meta property="og:image" content="https://imgur.com/4zi5KkQ.png" />
       <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
       <meta name="twitter:card" content="summary_large_image" />
+      <link rel="icon" href="/favicon.png" />
     </Head>
   );
 };

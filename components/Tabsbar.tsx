@@ -2,6 +2,8 @@ import Tab from '@/components/Tab';
 
 import styles from '@/styles/Tabsbar.module.css';
 
+import { VscGithubAlt, VscBriefcase } from 'react-icons/vsc';
+
 const Tabsbar = () => {
   return (
     <div className={styles.tabs}>
@@ -23,6 +25,13 @@ const Tabsbar = () => {
         icon="/logos/markdown_icon.svg"
         filename="github.md"
         path="/github"
+        ReactIcon={VscGithubAlt}
+      />
+      <Tab
+        icon="/logos/json_icon.svg"
+        filename="services.ts"
+        path="/services"
+        ReactIcon={VscBriefcase}
       />
     </div>
   );

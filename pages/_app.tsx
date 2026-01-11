@@ -8,6 +8,8 @@ import Head from '@/components/Head';
 import '@/styles/globals.css';
 import '@/styles/themes.css';
 
+import Script from 'next/script';
+
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const isCVPage = router.pathname === '/cv';
@@ -26,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head title={`Umar Hashmi | ${pageProps.title} `} />
+      <Script src="//code.tidio.co/fbdrtd1bgclkrqsd0jnng1y2ygncz1am.js" strategy="lazyOnload" />
       <Component {...pageProps} />
     </Layout>
   );

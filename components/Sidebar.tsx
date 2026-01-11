@@ -9,6 +9,7 @@ import {
   VscFiles,
   VscEdit,
   VscTools,
+  VscBriefcase,
 } from 'react-icons/vsc';
 import {
   FaWhatsapp,
@@ -27,6 +28,7 @@ const sidebarTopItems = [
   { Icon: VscCode, path: '/projects' },
   { Icon: VscEdit, path: '/articles' },
   { Icon: VscTools, path: '/technologies' },
+  { Icon: VscBriefcase, path: '/services' },
   { Icon: VscMail, path: '/contact' },
 ];
 
