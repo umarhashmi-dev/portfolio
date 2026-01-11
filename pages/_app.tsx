@@ -9,6 +9,7 @@ import '@/styles/globals.css';
 import '@/styles/themes.css';
 
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -22,7 +23,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   if (isCVPage) {
-    return <Component {...pageProps} />;
+    return (
+      <>
+        <Component {...pageProps} />
+        <Analytics />
+      </>
+    );
   }
 
   return (
@@ -30,8 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head title={`Umar Hashmi | ${pageProps.title} `} />
       <Script src="//code.tidio.co/fbdrtd1bgclkrqsd0jnng1y2ygncz1am.js" strategy="lazyOnload" />
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   );
 }
-
-

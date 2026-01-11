@@ -17,6 +17,7 @@
   "author": "Umar Hashmi",
   "license": "MIT",
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "next": "15.2.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
