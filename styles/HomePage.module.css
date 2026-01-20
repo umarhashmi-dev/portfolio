@@ -289,6 +289,8 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  min-width: 170px;
+  justify-content: center;
 }
 
 .primaryLink::before {
@@ -321,6 +323,8 @@
   font-size: 1rem;
   border: 2px solid var(--accent-color);
   transition: all 0.25s ease;
+  min-width: 170px;
+  justify-content: center;
 }
 
 .outlinedLink:hover {
