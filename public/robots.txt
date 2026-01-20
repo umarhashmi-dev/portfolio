@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://umarhashmi.dev
+Host: https://www.umarhashmi.dev
 
 # Sitemaps
-Sitemap: https://umarhashmi.dev/sitemap.xml
+Sitemap: https://www.umarhashmi.dev/sitemap.xml

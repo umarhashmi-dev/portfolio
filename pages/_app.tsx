@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 
 import Layout from '@/components/Layout';
 import Head from '@/components/Head';
+import ErrorBoundary from '@/components/ErrorBoundary';
+import Schema from '@/components/SEO/Schema';
 
 import '@/styles/globals.css';
 import '@/styles/themes.css';
@@ -32,11 +34,14 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <Layout>
-      <Head title={`Umar Hashmi | ${pageProps.title} `} />
-      <Script src="//code.tidio.co/fbdrtd1bgclkrqsd0jnng1y2ygncz1am.js" strategy="lazyOnload" />
-      <Component {...pageProps} />
-      <Analytics />
-    </Layout>
+    <ErrorBoundary>
+      <Layout>
+        <Head title={`Umar Hashmi | ${pageProps.title} `} />
+        <Schema />
+        <Script src="//code.tidio.co/fbdrtd1bgclkrqsd0jnng1y2ygncz1am.js" strategy="lazyOnload" />
+        <Component {...pageProps} />
+        <Analytics />
+      </Layout>
+    </ErrorBoundary>
   );
 }

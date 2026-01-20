@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://umarhashmi.dev',
+    siteUrl: process.env.SITE_URL || 'https://www.umarhashmi.dev',
     generateRobotsTxt: true,
     generateIndexSitemap: false,
     additionalPaths: async (config) => {

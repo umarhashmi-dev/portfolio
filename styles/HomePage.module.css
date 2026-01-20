@@ -807,7 +807,8 @@
     margin-right: auto;
   }
 
-  .primaryLink {
+  .primaryLink,
+  .outlinedLink {
     width: 100%;
     max-width: 240px;
     justify-content: center;
@@ -819,7 +820,8 @@
     box-shadow: 0 4px 20px rgba(var(--accent-color-rgb), 0.4);
   }
 
-  .primaryLink:hover {
+  .primaryLink:hover,
+  .outlinedLink:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(var(--accent-color-rgb), 0.5);
   }

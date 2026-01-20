@@ -6,6 +6,7 @@
   width: 4.5vw;
   min-width: 40px;
   height: calc(100vh - 30px - 25px);
+  height: calc(100dvh - 30px - 25px);
 }
 
 .iconContainer {
@@ -45,6 +46,7 @@
   .sidebar {
     width: 8vw;
   }
+
   .icon {
     height: 48px;
     width: 48px;
@@ -56,6 +58,7 @@
   .sidebar {
     width: 10vw;
   }
+
   .icon {
     height: 40px;
     width: 40px;
