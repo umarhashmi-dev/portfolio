@@ -4,6 +4,8 @@
   display: flex;
   background: var(--main-bg);
   overflow-x: hidden;
+  height: calc(100vh - 30px - 25px); /* Matches Sidebar calculation: 100vh - Titlebar - Bottombar */
+  width: 100vw;
 }
 
 .content {
